@@ -1,17 +1,21 @@
 {
   "files": {
     "main.css": "/my-profile-gh-pages/static/css/main.2cce8147.chunk.css",
-    "main.js": "/my-profile-gh-pages/static/js/main.d398ac62.chunk.js",
-    "main.js.map": "/my-profile-gh-pages/static/js/main.d398ac62.chunk.js.map",
+    "main.js": "/my-profile-gh-pages/static/js/main.d4639348.chunk.js",
+    "main.js.map": "/my-profile-gh-pages/static/js/main.d4639348.chunk.js.map",
     "runtime~main.js": "/my-profile-gh-pages/static/js/runtime~main.1d2a730c.js",
     "runtime~main.js.map": "/my-profile-gh-pages/static/js/runtime~main.1d2a730c.js.map",
     "static/css/2.b295486b.chunk.css": "/my-profile-gh-pages/static/css/2.b295486b.chunk.css",
-    "static/js/2.4bff1b65.chunk.js": "/my-profile-gh-pages/static/js/2.4bff1b65.chunk.js",
-    "static/js/2.4bff1b65.chunk.js.map": "/my-profile-gh-pages/static/js/2.4bff1b65.chunk.js.map",
+    "static/js/2.25780cb7.chunk.js": "/my-profile-gh-pages/static/js/2.25780cb7.chunk.js",
+    "static/js/2.25780cb7.chunk.js.map": "/my-profile-gh-pages/static/js/2.25780cb7.chunk.js.map",
     "index.html": "/my-profile-gh-pages/index.html",
-    "precache-manifest.aca7f85c750f7660a8c8144db781e298.js": "/my-profile-gh-pages/precache-manifest.aca7f85c750f7660a8c8144db781e298.js",
+    "precache-manifest.71579bb271b847510ddb901b27f38151.js": "/my-profile-gh-pages/precache-manifest.71579bb271b847510ddb901b27f38151.js",
     "service-worker.js": "/my-profile-gh-pages/service-worker.js",
     "static/css/2.b295486b.chunk.css.map": "/my-profile-gh-pages/static/css/2.b295486b.chunk.css.map",
-    "static/css/main.2cce8147.chunk.css.map": "/my-profile-gh-pages/static/css/main.2cce8147.chunk.css.map"
+    "static/css/main.2cce8147.chunk.css.map": "/my-profile-gh-pages/static/css/main.2cce8147.chunk.css.map",
+    "static/media/about.svg": "/my-profile-gh-pages/static/media/about.480ed7c1.svg",
+    "static/media/contact.svg": "/my-profile-gh-pages/static/media/contact.14026fad.svg",
+    "static/media/home.svg": "/my-profile-gh-pages/static/media/home.a0efd293.svg",
+    "static/media/logo.svg": "/my-profile-gh-pages/static/media/logo.5d5d9eef.svg"
   }
 }
