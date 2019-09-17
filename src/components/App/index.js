@@ -4,10 +4,15 @@
     import About from '../../components/About';
     import Contact from '../../components/Contacts';
     import Repos from '../../components/Repos';
+    import logo from '../../icons/logo.svg';
+    import homeIcon from '../../icons/home.svg';
+    import aboutIcon from '../../icons/about.svg';
+    import contactIcon from '../../icons/contact.svg';
     import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
     import 'bootstrap/dist/css/bootstrap.min.css';
     import '@trendmicro/react-sidenav/dist/react-sidenav.css';
     import "./App.css";
+
     class App extends Component {
       state = {
         selected: 'home',
@@ -27,22 +32,39 @@
             <React.Fragment>                                
                 <div
                     style={{
-                        marginLeft: expanded ? 240 : 64,
-                        padding: '15px 20px 0 20px'
+                        marginLeft: expanded ? 230 : 54,
+                        padding: '5px 20px 0 0px',
+                        backgroundColor: '#343A40'
                     }}
                 >
-                <h2>Welcome to my page</h2>
-                <Switch>
-                    <Route path="/" exact component={Home} />                
-                    <Route path="/about" component={About} />
-                    <Route path="/contact" component={Contact} />
-                </Switch>
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">                        
+                        <a class="navbar-brand"  href="/">
+                            <img src = {logo} width = "117px" style={{float:'left'}} />
+                            <h1 style= {{padding:'17px 0 0 0'}}>Welcome to my page</h1>
+                        </a>                        
+                    </nav>  
+                    
+                </div>
+            
+                <div
+                    style={{
+                        marginLeft: expanded ? 240 : 64,
+                        padding: '5px 20px 0 20px'
+                    }}
+                >
+                    <Switch>
+                        <Route path="/" exact component={Home} />                
+                        <Route path="/about" component={About} />
+                        <Route path="/contact" component={Contact} />
+                    </Switch>
                 </div>
             <SideNav
-                    onSelect={(selected) => {
+                    onSelect={(selected) => {                        
                         const to = '/' + selected;
-                        if (location.pathname !== to) {
+                        if (location.pathname !== to && selected !== "home") {
                             history.push(to);
+                        }else if (selected === "home"){
+                            history.push('/');
                         }
                     }} 
                     onToggle = {this.onToggle}
@@ -51,6 +73,13 @@
                     <SideNav.Nav defaultSelected="home">
                         <NavItem eventKey="home">
                             <NavIcon>
+                                <img src = {homeIcon} 
+                                     style = {{position: 'inherit',
+                                               padding: '0 0 10px 0',
+                                               width: '75%',
+                                               height: '75%',
+                                               opacity: '0.8',
+                                             }} />
                                 <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
                             </NavIcon>
                             <NavText>
@@ -59,14 +88,28 @@
                         </NavItem>
                         <NavItem eventKey="about">
                             <NavIcon>
+                                <img src = {aboutIcon} 
+                                     style = {{position: 'inherit',
+                                               padding: '0 0 10px 0',
+                                               width: '75%',
+                                               height: '75%',
+                                               opacity: '0.8',
+                                             }} />
                                 <i className="fa fa-fw fa-report" style={{ fontSize: '1.75em' }} />
                             </NavIcon>
                             <NavText>
                                 About
                             </NavText>
                         </NavItem>
-                        <NavItem eventKey="contact">
+                        <NavItem eventKey="contact">                            
                             <NavIcon>
+                            <img src = {contactIcon} 
+                                     style = {{position: 'inherit',
+                                               padding: '0 0 10px 0',
+                                               width: '75%',
+                                               height: '75%',
+                                               opacity: '0.8',
+                                             }} />
                                 <i className="fa fa-fw fa-device" style={{ fontSize: '1.75em' }} />
                             </NavIcon>
                             <NavText>
@@ -79,26 +122,6 @@
         )}
         />
         </Router>
-        /*<Router>
-            <div>
-              <h2>Welcome to my homepage</h2>
-              <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <ul className="navbar-nav mr-auto">
-                <li><Link to={'/'} className="nav-link"> Home </Link></li>
-                <li><Link to={'/about'} className="nav-link">About</Link></li>
-                <li><Link to={'/repos'} className="nav-link">Repos</Link></li>
-                <li><Link to={'/contact'} className="nav-link">Contact</Link></li>
-              </ul>
-              </nav>
-              <hr />
-              <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route path='/about' component={About} />
-                  <Route path='/repos' component={Repos} />
-                  <Route path='/contact' component={Contact} />
-              </Switch>
-            </div>
-          </Router>*/
         );
       }
     }
